@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PiosenkiInfo.Page1"
+             Title="PiosenkiInfo">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Center">
+            <Image x:Name="images"/>
+            <Label Text="Welcome to Xamarin.Forms!"
+                   x:Name="name"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+                    
+            <Label Text=""
+                   x:Name="artist"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"/>
+            <Label Text=""
+                   x:Name="rok"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Button
+                x:Name="button"
+        Text="Dodaj do ulubinych"
+        Clicked="Button_Clicked"
+        />
+        </StackLayout>
+    </ContentPage.Content>
+ 
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PiosenkiInfo.ListPage"
+             Title="PiosenkiInfo">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search items..."
+                       x:Name="search_bar"
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+            <ListView
+                x:Name="list"
+                ItemTapped="list_ItemTapped"
+                SelectionMode="None"
+                RowHeight="64">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                            <StackLayout 
+                             Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal"
+                                             >
+
+                                    <Grid >
+                                            <Image
+                                            Source="{Binding Images}"
+                                            WidthRequest="64"
+                                            HeightRequest="64"
+                                            Grid.RowSpan="2"
+                                            HorizontalOptions="Start"
+                                />
+                                            <Label
+                                             Text="{Binding Title}"
+                                             MaxLines="1"
+                                             FontSize="Medium"
+                                             Margin="64,0"
+                                             Grid.Row="0"    
+                                                
+                                />
+                                            <Label
+                                            Text="{Binding Artist}"
+                                            TextColor="Gray"
+                                            FontSize="Small"
+                                            Grid.Row="1"
+                                            Margin="64,0"
+                                        
+                                />
+                                    </Grid>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+        Text="Ulubione"
+        Clicked="Button_Clicked"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
